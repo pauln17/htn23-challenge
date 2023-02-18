@@ -9,7 +9,7 @@ import '../styles/eventCard.css';
 const EventCard = ({ event: { description, event_type, id, name, permission, private_url, public_url, speakers, start_time } }) => {
     return (
         <>
-            <Card style={{ width: '18rem' }}>
+            <Card className="card" style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={ 'https://i.imgur.com/SZFa3wf.png' }/>
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
@@ -22,11 +22,9 @@ const EventCard = ({ event: { description, event_type, id, name, permission, pri
                     <ListGroup.Item><strong>Start Time (EST):</strong> {new Date(start_time).toLocaleString('en-US', { year: 'numeric', month: 'numeric', day : 'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'UTC'})}</ListGroup.Item>
                     <ListGroup.Item><strong>Category:</strong> {event_type}</ListGroup.Item>
                 </ListGroup>
-                {public_url && (
-                    <Card.Body>
-                        <Card.Link target="_blank" href={public_url}>Learn More</Card.Link>
-                    </Card.Body>
-                )}
+                <Card.Body>
+                    <Card.Link className="card-link" target="_blank" href={public_url}>Learn More</Card.Link>
+                </Card.Body>
             </Card> 
         </>
     );

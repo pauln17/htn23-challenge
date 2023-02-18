@@ -32,9 +32,11 @@ const App = () => {
     <>
       <Navbar />
       <HeroText />
-      <div className="events-container"> 
+      <div className="events-container">
         {events.map((event) => {
-          return <EventCard event={event} />
+          return (
+            <EventCard event={event} />
+          )
         })}
       </div>
     </>

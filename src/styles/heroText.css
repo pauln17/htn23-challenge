@@ -4,7 +4,7 @@
     --primary-color: #5846fd;
 }
 
-.container {
+.section {
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;

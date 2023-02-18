@@ -3,8 +3,8 @@
 .navbar {
     background: #5846fd;
     display: flex;
-    justify-content: start;
-    align-items: end;
+    justify-content: flex-start;
+    align-items: flex-end;
     padding: 10px;
     box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.4);
     width: 100%;
