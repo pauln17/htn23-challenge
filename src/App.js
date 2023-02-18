@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 // Components
 import HeroText from './components/HeroText';
+import Navbar from './components/Navbar';
 
 // CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -28,7 +29,9 @@ const App = () => {
 
   return (
     <>
-      <HeroText />
+      <Navbar />
+      <HeroText /> 
+      
     </>
   );
 }

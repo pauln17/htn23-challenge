@@ -7,9 +7,9 @@ import '../styles/heroText.css';
 
 const HeroText = () => {
     return (
-        <div>
+        <div className="container">
             <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-center mt-5">
-                <h1 className="hero-text">Hack the North is Canada's <span className="word1">biggest</span> hackathon where <span className="word2">anyone</span> can <span className="word3">spark</span> their passion for {' '}
+                <h1 className="hero-text">Introducing Canada's <span className="word1">largest</span> hackathon where <span className="word2">anyone</span> can <span className="word3">spark</span> their passion for {' '}
                     <Typed
                     strings = {[
                         "design",
@@ -25,6 +25,11 @@ const HeroText = () => {
                     />
                 </h1>
             </div>
+            <div className="browse-events-container">
+                <h3>Upcoming Events</h3>
+                <button type="button" class="btn btn-outline-primary">See Private Events</button>
+            </div>
+            
         </div>
     );
 }
