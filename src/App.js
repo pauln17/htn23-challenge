@@ -2,8 +2,9 @@
 import React, { useState, useEffect } from 'react';
 
 // Components
-import HeroText from './components/HeroText';
 import Navbar from './components/Navbar';
+import HeroText from './components/HeroText';
+import EventCard from './components/EventCard';
 
 // CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -30,8 +31,12 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <HeroText /> 
-      
+      <HeroText />
+      <div className="events-container"> 
+        {events.map((event) => {
+          return <EventCard event={event} />
+        })}
+      </div>
     </>
   );
 }

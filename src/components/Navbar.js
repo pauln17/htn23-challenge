@@ -8,8 +8,8 @@ import '../styles/Navbar.css';
 const Navbar = () => {
     return (
         <>
-            <nav class="navbar">
-                <h6 class="navbar-text mb-0">Hack the North Events</h6>
+            <nav className="navbar">
+                <h6 className="navbar-text mb-0">Hack the North Events</h6>
             </nav>
         </>
     );

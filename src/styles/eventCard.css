@@ -1,0 +1,10 @@
+.events-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 50px;
+    background: rgba(139, 139, 139, 0.4);
+    padding: 25px 50px 25px;
+}
