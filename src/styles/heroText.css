@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap');
-
 .hero-text {
     font-family: Castledown, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-weight: 1000;
     width: 45%;
     font-size: calc(2vw + 1vh);
   }
