@@ -9,8 +9,9 @@ const HeroText = () => {
     return (
         <div className="section container">
             <div className="container-fluid d-flex flex-column justify-content-center align-items-center text-center mt-5">
-                <h1 className="hero-text">Introducing Canada's <span className="word1">largest</span> hackathon where <span className="word2">anyone</span> can <span className="word3">spark</span> their passion for {' '}
+                <h1 className="hero-text">Hack the North is Canada's largest hackathon where anyone can spark their passion for {' '}
                     <Typed
+                    className="type-animation-strings"
                     strings = {[
                         "design",
                         "learning",
@@ -27,7 +28,7 @@ const HeroText = () => {
             </div>
             <div className="browse-events-container">
                 <h3>Upcoming Events</h3>
-                <button type="button" className="btn btn-outline-primary">Register</button>
+                <button type="button" className="btn">Register</button>
             </div>
         </div>
     );

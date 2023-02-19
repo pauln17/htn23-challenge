@@ -4,14 +4,10 @@
 }
 
 body {
-  background: white;
+  background: linear-gradient(210deg, #225ba7, #852dd8);
   background-position: fixed;
   background-size: cover;
   color: black;
-}
-
-.container {
-  width: 100%;
 }
 
 .card-link {
