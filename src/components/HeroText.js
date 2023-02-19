@@ -27,7 +27,7 @@ const HeroText = () => {
             </div>
             <div className="browse-events-container">
                 <h3>Upcoming Events</h3>
-                <button type="button" className="btn btn-outline-primary">See Private Events</button>
+                <button type="button" className="btn btn-outline-primary">Register</button>
             </div>
         </div>
     );
