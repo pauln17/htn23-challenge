@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
+
 .events-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -15,6 +17,7 @@
 }
 
 .card {
+    font-family: 'Hind Siliguri', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
