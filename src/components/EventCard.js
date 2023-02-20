@@ -7,21 +7,31 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/eventCard.css';
 
 const EventCard = ({ event: { description, event_type, id, name, permission, private_url, public_url, speakers, start_time } }) => {
+ 
+    function toProperCase(str) {
+        const noUnderscores = str.replace(/_/g, ' ');
+        const capitalized = noUnderscores.replace(/(^|\s)\S/g, function(firstLetter) {
+          return firstLetter.toUpperCase();
+        });
+        return capitalized;
+    }
+
     return (
         <>
             <Card className="card" style={{ width: '18rem' }}>
                 <a target="_blank" className="card-info-link" {...public_url && {href: public_url}}>
-                    <Card.Img variant="top" src={ 'https://i.imgur.com/SZFa3wf.png' }/>
+                    <Card.Img className="card-img" variant="top" src='https://i.imgur.com/SZFa3wf.png'/>
                     <Card.Body>
-                        <Card.Title>{name}</Card.Title>
-                        <Card.Text>{description}</Card.Text>
+                        <Card.Title className="card-title">{name}</Card.Title>
+                        <Card.Text className="event-type">{toProperCase(event_type)}</Card.Text>
+                        <Card.Text className="card-text">{description}</Card.Text>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                    {speakers[0] && (
-                        <ListGroup.Item><strong>Speaker:</strong> {speakers[0].name}</ListGroup.Item>
-                    )}                
-                        <ListGroup.Item><strong>Start Time (EST):</strong> {new Date(start_time).toLocaleString('en-US', { year: 'numeric', month: 'numeric', day : 'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'UTC'})}</ListGroup.Item>
-                        <ListGroup.Item><strong>Category:</strong> {event_type}</ListGroup.Item>
+                        <ListGroup.Item></ListGroup.Item>
+                        {speakers[0] && (
+                            <ListGroup.Item><strong>Speaker:</strong> {speakers[0].name}</ListGroup.Item>
+                        )}                
+                            <ListGroup.Item><strong>Start Time (EST):</strong> {new Date(start_time).toLocaleString('en-US', { year: 'numeric', month: 'numeric', day : 'numeric', hour: 'numeric', minute: 'numeric', timeZone: 'UTC'})}</ListGroup.Item>
                     </ListGroup>
                 </a>
             </Card> 
@@ -29,4 +39,4 @@ const EventCard = ({ event: { description, event_type, id, name, permission, pri
     );
 }
 
-export default EventCard
+export default EventCard;
