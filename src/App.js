@@ -1,5 +1,6 @@
 // Libraries
 import React, { useState, useEffect } from 'react';
+import { FaSearch } from 'react-icons/fa';
 
 // Components
 import Navbar from './components/Navbar';
@@ -15,18 +16,26 @@ const EVENTS_API_URL = 'https://api.hackthenorth.com/v3/events/';
 
 const App = () => {
   const [events, setEvents] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   // Fetch data from URL
-  const searchEvents = async (eventId) => {
-    const response = await fetch(`${EVENTS_API_URL}${eventId}`);
+  const searchEvents = async (searchTerm) => {
+    const response = await fetch(`${EVENTS_API_URL}`);
     const data = await response.json();
 
-    setEvents(data)
+    let filteredData = data.filter(event => event.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    if (filteredData.length === 0) {
+      filteredData = data
+    }
+
+    setEvents(filteredData)
   }
 
   useEffect(() => {
-    searchEvents('')
-  }, [])
+    searchEvents(searchTerm);
+  }, [searchTerm, searchEvents]);
+
 
   return (
     <>
@@ -39,13 +48,22 @@ const App = () => {
       </div>
 
       <div className="events-container">
-        {events.map((event) => {
-          return (
-            <EventCard event={event} />
-          )
-        })}
+        <div className="events-container-header">
+          <div className="search-bar">
+            <input placeholder='Search' value={searchTerm} onChange = {(e) => setSearchTerm(e.target.value)}></input>
+            <FaSearch className="search-icon" onClick={() => searchEvents(searchTerm)}/>
+          </div>
+        </div>
+
+        <div className="event-cards">
+          {events.map((event) => {
+            return (
+              <EventCard event={event} />
+            )
+          })}
+        </div>
       </div>
-      
+
     </>
   );
 }
