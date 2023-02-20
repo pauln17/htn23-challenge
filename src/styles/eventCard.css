@@ -26,3 +26,7 @@
     scale: 1.05;
 }
 
+.card-info-link, .card-info-link:hover {
+    text-decoration: none;
+    color: black;
+}
