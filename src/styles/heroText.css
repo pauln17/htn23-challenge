@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
 
 :root {
     --primary-color: #ffffff;
@@ -22,21 +23,10 @@
     font-size: calc(3vw + 1vh);
 }
 
-.browse-events-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.browse-events-container h3 {
-    font-family: 'Roboto', sans-serif;
-    font-size: calc(1.5vw + 1vh);
-}
-
 .btn {
-    font-size: 18px;
+    font-family: 'Hind Siliguri', sans-serif;
+    width: 75%;
+    font-size: 24px;
     color: white;
     border: 1px solid var(--primary-color);
     transition: 0.2s ease-in;
@@ -44,17 +34,18 @@
 
 .btn:hover {
     color: black;
-    background: white;
+    background: rgb(216, 216, 216);
 
 }
 
 .btn:active:focus {
-    background: white;
+    background: rgb(216, 216, 216);
     color: black;
 }
 
 .type-animation-strings {
     display: block;
+    color: linear-gradient(90deg, rgb(218, 144, 49), rgb(204, 204, 5));
 }
 
 @media (max-width: 700px) {

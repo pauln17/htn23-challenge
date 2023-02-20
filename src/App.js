@@ -31,7 +31,13 @@ const App = () => {
   return (
     <>
       <Navbar />
+
       <HeroText />
+
+      <div className="browse-events-container">
+        <h3>Upcoming Events</h3>
+      </div>
+
       <div className="events-container">
         {events.map((event) => {
           return (
@@ -39,6 +45,7 @@ const App = () => {
           )
         })}
       </div>
+      
     </>
   );
 }

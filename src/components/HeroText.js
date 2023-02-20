@@ -26,10 +26,6 @@ const HeroText = () => {
                     />
                 </h1>
             </div>
-            <div className="browse-events-container">
-                <h3>Upcoming Events</h3>
-                <button type="button" className="btn">Register</button>
-            </div>
         </div>
     );
 }
