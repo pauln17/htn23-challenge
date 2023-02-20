@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: linear-gradient(210deg, #225ba7, #852dd8);
+  /* background: linear-gradient(210deg, #225ba7, #852dd8); */
+  background: rgb(7, 7, 7);
   background-position: fixed;
   background-size: cover;
-  color: black;
+  color: rgb(12, 12, 12);
 }
 
 .card-link {
@@ -24,9 +27,9 @@ body {
 }
 
 .browse-events-container h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: calc(2vw + 1vh);
-  animation: bounce 0.5s infinite ease-out alternate;
+  animation: bounce 0.75s infinite ease-out alternate;
 }
 
 @keyframes bounce {
@@ -34,6 +37,6 @@ body {
       translate: 0 0;
   }
   100% {
-      translate: 0 -15%;
+      translate: 0 -25%;
   }
 }

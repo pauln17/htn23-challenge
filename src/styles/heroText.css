@@ -45,7 +45,25 @@
 
 .type-animation-strings {
     display: block;
-    color: linear-gradient(90deg, rgb(218, 144, 49), rgb(204, 204, 5));
+    opacity: 0.5;
+}
+
+.word-1 {
+    background-image: linear-gradient(90deg, #50CC7F, #F5D100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.word-2 {
+    background-image: linear-gradient(90deg, rgb(15, 228, 26), rgb(29, 231, 204));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.word-3 {
+    background-image: linear-gradient(90deg, rgb(231, 149, 42), rgb(233, 212, 20));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 700px) {
