@@ -20,9 +20,10 @@
     align-items: center;
     list-style: none;
     padding: 15px;
-    gap: 0 75px;
+    gap: 0 125px;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 .footer-socials li a {
@@ -32,6 +33,28 @@
     font-size: calc(0.45vw + 1vh);
     transition: 0.15s ease-in;
     font-weight: 1000;
+    position: relative;
+}
+
+.footer-socials li:first-child::before,
+.footer-socials li:last-child::after {
+    content: '';
+    height: 3px;
+    color: white;
+    background: white;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+}
+
+.footer-socials li:first-child::before {
+    left: 50px;
+    width: calc(50% - 425px);
+}
+
+.footer-socials li:last-child::after {
+    right: 50px;
+    width: calc(50% - 425px);
 }
 
 .socials {
@@ -57,6 +80,19 @@
 
 .five:hover {
     color: rgb(163, 49, 216);
+}
+
+@media (max-width: 1000px) {
+    .footer-socials li:first-child::before,
+    .footer-socials li:last-child::after {
+        height: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer-socials {
+        gap: 15%;
+    }
 }
 
 @media (max-width: 500px) {
