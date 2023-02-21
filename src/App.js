@@ -1,8 +1,9 @@
 // Libraries
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 // Components
+import ParticleEffects from './components/ParticleEffects';
 import Navbar from './components/Navbar';
 import HeroText from './components/HeroText';
 import EventCard from './components/EventCard';
@@ -21,34 +22,36 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   // Fetch & Modify Data from URL
-  const getEvents = async (searchTerm) => {
-    const response = await fetch(`${EVENTS_API_URL}`);
-    const data = await response.json();
-    
-    let filteredData = data;
+const getEvents = useCallback(async (searchTerm) => {
+  const response = await fetch(`${EVENTS_API_URL}`);
+  const data = await response.json();
 
-    // Filter for Search Bar
-    if (searchTerm) {
-      filteredData = data.filter(event => event.name.toLowerCase().includes(searchTerm.toLowerCase()));
-      
-      // In the scenario of no results, then just reset to original data (all events)
-      if (filteredData.length === 0) {
-        filteredData = data
-      }
+  let filteredData = data;
+
+  // Filter for Search Bar
+  if (searchTerm) {
+    filteredData = data.filter(event => event.name.toLowerCase().includes(searchTerm.toLowerCase()));
+
+    // In the scenario of no results, then just reset to original data (all events)
+    if (filteredData.length === 0) {
+      filteredData = data
     }
-    
-    setEvents(filteredData)
   }
 
-  // Render w/ Dependencies [searchTerm, getEvents] -- run everytime these functions are called/changed
-  useEffect(() => {
-    getEvents(searchTerm);
-  }, [searchTerm, getEvents]);
+  setEvents(filteredData)
+}, [setEvents]);
+
+// Render w/ Dependencies [searchTerm, getEvents] -- run everytime these functions are called/changed
+useEffect(() => {
+  getEvents(searchTerm);
+}, [searchTerm, getEvents]);
 
   return (
     <>
-      <Navbar />
+      <ParticleEffects />
       
+      <Navbar />
+
       <HeroText />
 
       <div className="events-container">
