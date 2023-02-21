@@ -6,6 +6,7 @@ import { FaSearch } from 'react-icons/fa';
 import Navbar from './components/Navbar';
 import HeroText from './components/HeroText';
 import EventCard from './components/EventCard';
+import Footer from './components/Footer';
 
 // CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -43,12 +44,12 @@ const App = () => {
 
       <HeroText />
 
-      <div className="browse-events-container">
-        <h3>Upcoming Events</h3>
-      </div>
-
       <div className="events-container">
         <div className="events-container-header">
+          <div className="browse-events-container">
+            <h3>Upcoming Events</h3>
+          </div>
+
           <div className="search-bar">
             <input placeholder='Search' value={searchTerm} onChange = {(e) => setSearchTerm(e.target.value)}></input>
             <FaSearch className="search-icon" onClick={() => searchEvents(searchTerm)}/>
@@ -63,6 +64,8 @@ const App = () => {
           })}
         </div>
       </div>
+      
+      <Footer />
 
     </>
   );
