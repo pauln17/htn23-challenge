@@ -42,7 +42,7 @@ const ParticleEffects = () => {
                     modes: {
                         repulse: {
                             distance: 200,
-                            duration: 0.8,
+                            duration: 0.1,
                         },
                     },
                 },
@@ -73,7 +73,7 @@ const ParticleEffects = () => {
                     number: {
                         density: {
                             enable: true,
-                            area: 1000,
+                            area: 800,
                         },
                         value: 80,
                     },

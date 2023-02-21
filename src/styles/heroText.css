@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     gap: 50px;
-    color: white;
+    color: rgb(243, 243, 243);
 }
 
 .hero-text {
@@ -45,6 +45,7 @@
 
 .type-animation-strings {
     display: block;
+    color: white;
 }
 
 .word-1 {
