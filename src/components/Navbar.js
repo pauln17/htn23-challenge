@@ -1,6 +1,5 @@
 // Libraries
 import React from 'react';
-import { FaInstagram, FaFacebookF, FaTwitter, FaLinkedin, FaTiktok} from 'react-icons/fa';
 
 // CSS
 import '../styles/navbar.css';

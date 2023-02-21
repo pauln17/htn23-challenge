@@ -48,7 +48,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-
+      
       <HeroText />
 
       <div className="events-container">

@@ -20,7 +20,7 @@ const EventCard = ({ event: { description, event_type, id, name, permission, pri
     return (
         <>
             <Card className="card h-100 w-100" style={{ width: '18rem' }}>
-                <a target="_blank" className="card-info-link" {...public_url && {href: public_url}}>
+                <a className="card-info-link" {...public_url && {href: public_url, target: "_blank"}}>
                     <div className="cards-content-container">
                         <div>
                             <Card.Img className="card-img" variant="top" src='https://i.imgur.com/SZFa3wf.png'/>
