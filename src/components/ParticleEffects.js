@@ -12,7 +12,7 @@ const ParticleEffects = () => {
     }, []);
 
     const particlesLoaded = useCallback(async container => {
-        await console.log(container);
+        console.log(container);
     }, []);
 
     return (
@@ -52,7 +52,7 @@ const ParticleEffects = () => {
                     },
                     links: {
                         color: "#ffffff",
-                        distance: 150,
+                        distance: 100,
                         enable: true,
                         opacity: 0.5,
                         width: 1,
@@ -67,7 +67,7 @@ const ParticleEffects = () => {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 2.5,
+                        speed: 2,
                         straight: false,
                     },
                     number: {
