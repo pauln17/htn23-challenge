@@ -27,7 +27,7 @@ const ParticleEffects = () => {
                     },
                     modes: {
                         repulse: {
-                            distance: 200,
+                            distance: 150,
                             duration: 0.8,
                         },
                     },
@@ -38,7 +38,7 @@ const ParticleEffects = () => {
                     },
                     links: {
                         color: "#ffffff",
-                        distance: 100,
+                        distance: 95,
                         enable: true,
                         opacity: 0.5,
                         width: 1,
@@ -56,9 +56,9 @@ const ParticleEffects = () => {
                     number: {
                         density: {
                             enable: true,
-                            area: 800,
+                            area: 750,
                         },
-                        value: 80,
+                        value: 120,
                     },
                     opacity: {
                         value: { min: 0.3, max: 0.7 },
