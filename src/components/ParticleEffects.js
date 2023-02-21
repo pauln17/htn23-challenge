@@ -58,14 +58,11 @@ const ParticleEffects = () => {
                         width: 1,
                     },
                     collisions: {
-                        enable: true,
+                        enable: false,
                     },
                     move: {
                         directions: "none",
                         enable: true,
-                        outModes: {
-                            default: "bounce",
-                        },
                         random: false,
                         speed: 2,
                         straight: false,
@@ -84,7 +81,7 @@ const ParticleEffects = () => {
                         type: "circle",
                     },
                     size: {
-                        value: { min: 1, max: 5 },
+                        value: { min: 1, max: 3 },
                     },
                 },
                 detectRetina: true,
