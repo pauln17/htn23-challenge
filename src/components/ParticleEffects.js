@@ -3,23 +3,9 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
 const ParticleEffects = () => {
-    const particlesInit = useCallback(async engine => {
-        console.log(engine);
-        // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-        // starting from v2 you can add only the features you need reducing the bundle size
-        await loadFull(engine);
-    }, []);
-
-    const particlesLoaded = useCallback(async container => {
-        console.log(container);
-    }, []);
-
     return (
         <Particles
             id="tsparticles"
-            init={particlesInit}
-            loaded={particlesLoaded}
             options={{
                 fullScreen: {
                     enable: true,
@@ -42,7 +28,7 @@ const ParticleEffects = () => {
                     modes: {
                         repulse: {
                             distance: 200,
-                            duration: 0.1,
+                            duration: 0.8,
                         },
                     },
                 },
@@ -64,7 +50,7 @@ const ParticleEffects = () => {
                         directions: "none",
                         enable: true,
                         random: false,
-                        speed: 2,
+                        speed: { min: 2, max: 4 },
                         straight: false,
                     },
                     number: {
@@ -75,7 +61,7 @@ const ParticleEffects = () => {
                         value: 80,
                     },
                     opacity: {
-                        value: 0.5,
+                        value: { min: 0.3, max: 0.7 },
                     },
                     shape: {
                         type: "circle",
