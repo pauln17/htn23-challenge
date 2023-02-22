@@ -5,8 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Components
 import ParticleEffects from './components/background/ParticleEffects';
 import Home from './components/main-page/Home';
-import Login from './components/user-information/Login';
-import Register from './components/user-information/Register';
+import Login from './components/user-info/Login';
+import Register from './components/user-info/Register';
 
 function App() {
   return (

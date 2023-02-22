@@ -10,7 +10,7 @@ import Footer from './Footer';
 
 // CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../../styles/home.css';
+import '../../styles/main-page/home.css';
 
 // API URL
 const EVENTS_API_URL = 'https://api.hackthenorth.com/v3/events/';

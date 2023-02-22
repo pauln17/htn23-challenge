@@ -3,7 +3,7 @@ import Typed from 'react-typed';
 
 // CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../../styles/heroText.css';
+import '../../styles/main-page/heroText.css';
 
 const HeroText = () => {
     return (

@@ -3,18 +3,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // CSS
-import '../../styles/register.css';
+import '../../styles/user-info/user.css';
 
 const Register = () => {
     return (
         <>
-          <div className="register-container">  
+          <div className="user-container">  
                 <div className="forms-container">
-                    <div className="register-hero">
+                    <div className="user-hero">
                         <h3>Registration</h3>
                     </div>
 
-                    <form className="register-form">
+                    <form className="user-form">
                         <div className="input">
                             <label for="username">Username</label>
                             <input type="text" id="username" name="username" required/>
