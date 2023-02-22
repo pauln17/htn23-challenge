@@ -27,7 +27,7 @@ const ParticleEffects = (props) => {
         },
         modes: {
           repulse: {
-            distance: 100, // distance of the particles from the cursor
+            distance: 150, // distance of the particles from the cursor
             duration: 0.8,
           },
         },
@@ -42,7 +42,7 @@ const ParticleEffects = (props) => {
               enable: true,
               area: 1000,
           },
-          value: 80,
+          value: 120,
         },
         move: {
           enable: true, // enabling this will make particles move in the canvas
