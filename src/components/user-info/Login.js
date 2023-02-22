@@ -8,13 +8,13 @@ import '../../styles/user-info/user.css';
 const Login = () => {
     return (
         <>  
-            <div className="login-container">  
+            <div className="user-container">  
                 <div className="forms-container">
-                    <div className="login-hero">
+                    <div className="user-hero">
                         <h3>Login</h3>
                     </div>
 
-                    <form className="login-form">
+                    <form className="user-form">
                         <div className="input">
                             <label for="username">Username</label>
                             <input type="text" id="username" name="username" required/>
