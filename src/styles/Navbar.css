@@ -46,6 +46,7 @@
 }
 
 .register h3 {
+    color: white;
     font-size: calc(0.5vw + 1vh);
     font-family: 'Roboto', sans-serif;
     font-weight: 1000;
