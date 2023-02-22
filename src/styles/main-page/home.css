@@ -18,6 +18,17 @@ body {
   text-decoration: none;
 }
 
+.events-container {
+  display: flex;
+  flex-direction: column;
+  background: rgb(194, 194, 194);
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  margin: 6% 7% 0 7%;
+}
+
 .browse-events-container {
   display: flex;
   flex-direction: row;
@@ -31,18 +42,6 @@ body {
   font-family: 'Libre Franklin', sans-serif;
   font-size: calc(1.25vw + 1vh);
   margin: 25px;
-}
-
-.events-container {
-  display: flex;
-  flex-direction: column;
-  background: rgb(194, 194, 194);
-  justify-items: center;
-  align-items: center;
-  flex-wrap: wrap;
-  /* box-shadow: 5px 5px 50px 30px rgba(0, 0, 0, 0.3); */
-  border-radius: 15px;
-  margin: 6% 7% 0 7%;
 }
 
 .event-cards {
