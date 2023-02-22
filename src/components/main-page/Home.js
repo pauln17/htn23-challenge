@@ -1,6 +1,7 @@
 // Libraries
 import React, { useState, useEffect, useCallback } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import Plx from "react-plx";
 
 // Components
 import Navbar from './Navbar';
@@ -48,28 +49,65 @@ const Home = () => {
   return (
     <>
       <Navbar/>
-      <HeroText />
-      <div className="events-container">
-        <div className="events-container-header">
-          <div className="browse-events-container">
-            <h3>Upcoming Events</h3>
+      <Plx
+        parallaxData={[
+          {
+            start: 0,
+            end: 400,
+            easing: "ease-in",
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "scale"
+              },
+            ]
+          }
+        ]}
+      >
+        <HeroText />
+      </Plx>
+      
+
+
+      <Plx
+        parallaxData={[
+          {
+            start: 0,
+            end: 400,
+            easing: "ease-in",
+            properties: [
+              {
+                startValue: 0,
+                endValue: 1,
+                property: "opacity"
+              },
+            ]
+          }
+        ]}
+      >
+        <div className="events-container">
+          <div className="events-container-header">
+            <div className="browse-events-container">
+              <h3>Upcoming Events</h3>
+            </div>
+
+            <div className="search-bar">
+              <input placeholder='Search' value={searchTerm} onChange = {(e) => setSearchTerm(e.target.value)}></input>
+              <FaSearch className="search-icon" onClick={() => getEvents(searchTerm)}/>
+            </div>
           </div>
 
-          <div className="search-bar">
-            <input placeholder='Search' value={searchTerm} onChange = {(e) => setSearchTerm(e.target.value)}></input>
-            <FaSearch className="search-icon" onClick={() => getEvents(searchTerm)}/>
+          <div className="event-cards">
+            {/* Dynamically add event cards based on events object containing each event after all filters */}
+            {events.map((event) => {
+              return (
+                <EventCard event={event} />
+              )
+            })}
           </div>
         </div>
-
-        <div className="event-cards">
-          {/* Dynamically add event cards based on events object containing each event after all filters */}
-          {events.map((event) => {
-            return (
-              <EventCard event={event} />
-            )
-          })}
-        </div>
-      </div>
+      </Plx>
       <Footer />
     </>
   );
