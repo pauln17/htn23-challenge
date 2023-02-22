@@ -38,6 +38,8 @@ const Home = () => {
       }
     }
 
+    filteredData.sort((a, b) => a.start_time - b.start_time);
+
     setEvents(filteredData)
   }, [setEvents]);
 
