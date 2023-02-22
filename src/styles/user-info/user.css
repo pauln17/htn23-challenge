@@ -22,7 +22,7 @@
     min-width: 35%;
     height: fit-content;
     min-height: 55%;
-    background: rgb(194, 194, 194);
+    background: var(--primary-color);
     border-radius: 15px;
     padding: 10px 25px;
 }
@@ -55,7 +55,7 @@ input {
     font-size: calc(0.5vw + 1vh);
     width: calc(15vw + 10vh);
     height: 100%;
-    background: #dfdfdf;
+    background: rgb(238, 238, 238);
     outline: 0;
     padding: 0.5rem;
     border: 1px solid black;

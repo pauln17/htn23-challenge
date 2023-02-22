@@ -40,9 +40,9 @@ const ParticleEffects = (props) => {
         number: {
           density: {
               enable: true,
-              area: 1000,
+              area: 1500,
           },
-          value: 120,
+          value: 50,
         },
         move: {
           enable: true, // enabling this will make particles move in the canvas

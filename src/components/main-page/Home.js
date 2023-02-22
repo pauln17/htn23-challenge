@@ -6,7 +6,7 @@ import Plx from "react-plx";
 // Components
 import Navbar from './Navbar';
 import HeroText from './HeroText';
-import EventCard from './EventCard';
+import { EventCard, toProperCase } from './EventCard';
 import Footer from './Footer';
 
 // CSS
@@ -20,9 +20,11 @@ const Home = () => {
   // React Hooks
   const [events, setEvents] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [category, setCategory] = useState('');
+
 
   // Fetch & Modify Data from URL
-  const getEvents = useCallback(async (searchTerm) => {
+  const getEvents = useCallback(async (searchTerm, category) => {
     const response = await fetch(`${EVENTS_API_URL}`);
     const data = await response.json();
 
@@ -31,11 +33,14 @@ const Home = () => {
     // Filter for Search Bar
     if (searchTerm) {
       filteredData = data.filter(event => event.name.toLowerCase().includes(searchTerm.toLowerCase()));
+    }
 
-      // In the scenario of no results, then just reset to original data (all events)
-      if (filteredData.length === 0) {
-        filteredData = data
-      }
+    if (category) {
+      filteredData = data.filter(event => toProperCase(event.event_type).includes(category));
+    }
+
+    if (filteredData.length === 0) {
+      filteredData = data
     }
 
     filteredData.sort((a, b) => a.start_time - b.start_time);
@@ -45,8 +50,8 @@ const Home = () => {
 
   // Render w/ Dependencies [searchTerm, getEvents] -- run everytime these functions are called/changed
   useEffect(() => {
-    getEvents(searchTerm);
-  }, [searchTerm, getEvents]);
+    getEvents(searchTerm, category);
+  }, [searchTerm, category, getEvents]);
 
   return (
     <>
@@ -62,6 +67,11 @@ const Home = () => {
                 startValue: 1,
                 endValue: 0,
                 property: "scale"
+              },
+              {
+                startValue: 0,
+                endValue: -350,
+                property: "translateY"
               },
             ]
           }
@@ -84,6 +94,11 @@ const Home = () => {
                 endValue: 1,
                 property: "opacity"
               },
+              {
+                startValue: 0.6,
+                endValue: 1,
+                property: "scale"
+              },
             ]
           }
         ]}
@@ -94,9 +109,19 @@ const Home = () => {
               <h3>Upcoming Events</h3>
             </div>
 
-            <div className="search-bar">
-              <input placeholder='Search' value={searchTerm} onChange = {(e) => setSearchTerm(e.target.value)}></input>
-              <FaSearch className="search-icon" onClick={() => getEvents(searchTerm)}/>
+            <div className="optionals">
+              <form className="category-form">
+                <select onChange = {(e) => setCategory(e.target.value)}>
+                  <option value="All">All</option>
+                  <option value="Activity">Activity</option>
+                  <option value="Workshop">Workshop</option>
+                  <option value="Tech Talk">Tech Talk</option>
+                </select>      
+              </form>
+              <div className="search-bar">
+                <input placeholder='Search' value={searchTerm} onChange = {(e) => setSearchTerm(e.target.value)}></input>
+                <FaSearch className="search-icon" onClick={() => getEvents(searchTerm)}/>
+              </div>
             </div>
           </div>
 

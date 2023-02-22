@@ -6,16 +6,18 @@ import { Card, ListGroup } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../styles/main-page/eventCard.css';
 
+function toProperCase(str) {
+    const noUnderscores = str.replace(/_/g, ' ');
+    const capitalized = noUnderscores.replace(/(^|\s)\S/g, function(firstLetter) {
+      return firstLetter.toUpperCase();
+    });
+    return capitalized;
+}
+
 const EventCard = ({ event: { description, event_type, id, name, permission, private_url, public_url, speakers, start_time } }) => {
  
     // (Capitalizes String & Removes Underscore) -- event_type formatting
-    function toProperCase(str) {
-        const noUnderscores = str.replace(/_/g, ' ');
-        const capitalized = noUnderscores.replace(/(^|\s)\S/g, function(firstLetter) {
-          return firstLetter.toUpperCase();
-        });
-        return capitalized;
-    }
+
 
     return (
         <>
@@ -44,4 +46,4 @@ const EventCard = ({ event: { description, event_type, id, name, permission, pri
     );
 }
 
-export default EventCard;
+export { EventCard, toProperCase };
