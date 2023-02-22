@@ -3,7 +3,7 @@ import React from 'react';
 import { FaInstagram, FaFacebookF, FaTwitter, FaLinkedin, FaTiktok} from 'react-icons/fa';
 
 // CSS
-import '../styles/footer.css';
+import '../../styles/footer.css';
 
 const Footer = () => {
     return (

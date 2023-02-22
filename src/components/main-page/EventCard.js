@@ -4,7 +4,7 @@ import { Card, ListGroup } from 'react-bootstrap'
 
 // CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/eventCard.css';
+import '../../styles/eventCard.css';
 
 const EventCard = ({ event: { description, event_type, id, name, permission, private_url, public_url, speakers, start_time } }) => {
  

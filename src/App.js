@@ -3,14 +3,15 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
-import ParticleEffects from './components/ParticleEffects';
-import Home from './components/Home';
-import Login from './components/Login';
-import Register from './components/Register';
+import ParticleEffects from './components/background/ParticleEffects';
+import Home from './components/main-page/Home';
+import Login from './components/user-information/Login';
+import Register from './components/user-information/Register';
 
 function App() {
   return (
     <>
+      
       <ParticleEffects />
       <Router>
         <Routes>
