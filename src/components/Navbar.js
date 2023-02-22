@@ -9,10 +9,10 @@ const Navbar = () => {
         <>
             <nav className="navBar">
                 <ul className="navbar-links">
-                    <li><a target="_blank" href="https://hackthenorth.com/#about">About</a></li>
-                    <li><a target="_blank" href="https://hackthenorth.com/#stories">Stories</a></li>
-                    <li><a target="_blank" href="https://hackthenorth.com/#sponsors">Sponsors</a></li>
-                    <li><a target="_blank" href="https://hackthenorth.com/#faq">FAQ</a></li>
+                    <li><a target="_blank" rel="noreferrer" href="https://hackthenorth.com/#about">About</a></li>
+                    <li><a target="_blank" rel="noreferrer" href="https://hackthenorth.com/#stories">Stories</a></li>
+                    <li><a target="_blank" rel="noreferrer" href="https://hackthenorth.com/#sponsors">Sponsors</a></li>
+                    <li><a target="_blank" rel="noreferrer" href="https://hackthenorth.com/#faq">FAQ</a></li>
                 </ul>
                 <div className="register">
                     <h3>Login</h3>
