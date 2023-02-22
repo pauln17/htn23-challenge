@@ -21,6 +21,7 @@ I feel incredibly grateful for this process because it has taught me so much. Di
 
 # Considerations
 - Is the code written and documented such that a developer who is unfamiliar with the code can understand it relatively quickly?
+
 I believe so, I tried to organize the code in separate folders and the usage of react components definitely play an essential part. I also tried to comment parts of my code that used JavaScript. Additionally, I asked for a code review from a peer software developer who had experience winning multiple hackathons, and he was able to pick up on it easily.
 
 - Is your project structured in a way that is extensible and scalable? For example, if we wanted to add more events or event types, would it be possible to do so easily?
