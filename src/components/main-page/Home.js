@@ -30,17 +30,25 @@ const Home = () => {
 
     let filteredData = data;
 
-    // Filter for Search Bar
+    // Filter for events with names that include input from search bar
     if (searchTerm) {
       filteredData = data.filter(event => event.name.toLowerCase().includes(searchTerm.toLowerCase()));
     }
 
-    if (category) {
-      filteredData = data.filter(event => toProperCase(event.event_type).includes(category));
+    // If 'All' option is not selected, then filter the previous filtered data based on category selected
+    if (category !== 'All') {
+      filteredData = filteredData.filter(event => toProperCase(event.event_type).includes(category));
     }
 
+    // If there are no results . . .
     if (filteredData.length === 0) {
-      filteredData = data
+      // If no results and category is all, reset filteredData to all events
+      // If no results and category is not all, reset filteredData to all events and filter by selected category
+      if (category === "All") {
+        filteredData = data;
+      } else {
+        filteredData = data.filter(event => toProperCase(event.event_type).includes(category));
+      }
     }
 
     filteredData.sort((a, b) => a.start_time - b.start_time);
