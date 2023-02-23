@@ -55,7 +55,7 @@ const Home = () => {
 
   return (
     <>
-          <Plx
+      <Plx
         parallaxData={[
           {
             start: 0,
@@ -83,7 +83,7 @@ const Home = () => {
         parallaxData={[
           {
             start: 0,
-            end: 400,
+            end: 300,
             easing: "ease-in",
             properties: [
               {
@@ -93,7 +93,7 @@ const Home = () => {
               },
               {
                 startValue: 0,
-                endValue: 350,
+                endValue: 250,
                 property: "translateY"
               },
             ]
@@ -155,9 +155,9 @@ const Home = () => {
             })}
           </div>
         </div>
-        
-        <Footer />
       </Plx> 
+
+      <Footer />
     </>
   );
 }

@@ -32,6 +32,7 @@ body {
   flex-wrap: wrap;
   border-radius: 15px;
   margin: 8% 7% 0 7%;
+  z-index: 10000;
 }
 
 .browse-events-container {
