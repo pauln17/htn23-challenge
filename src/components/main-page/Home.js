@@ -109,7 +109,7 @@ const Home = () => {
         parallaxData={[
           {
             start: 0,
-            end: 700,
+            end: 400,
             easing: "ease-in",
             properties: [
               {

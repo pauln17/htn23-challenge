@@ -54,7 +54,8 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
   grid-auto-rows: auto;
   gap: 50px;
-  margin: 75px 50px;
+  margin: 50px 15px;
+  padding: 15px;
 }
 
 .events-container-header {
@@ -74,14 +75,14 @@ body {
   color: #000000;
   padding: 5px;
   height: 100%;
-  gap: 25px;
+  gap: 15px;
 }
 
 .optionals select {
   background: var(--optionals-color);
   outline: 0;
   border-radius: 3rem;
-  padding: 5%;
+  padding: 3%;
   font-size: calc(0.25vw + 1vh);
   border: 3px solid black;
 }
@@ -122,14 +123,14 @@ body {
   color: black;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 525px) {
   .search-bar {
     width: calc(15vw + 8vh);
   }
 
   .browse-events-container h3 {
-    font-size: calc(2vw + 1vh);
-    margin: 25px 0;
+    font-size: calc(3vw + 1vh);
+    margin: 25px 0 15px 0;
   }
 
   .events-container-header {
@@ -152,7 +153,6 @@ body {
   }
 
   .search-bar {
-    margin: 0 0 25px 0;
     width: 75%;
   }
 }
