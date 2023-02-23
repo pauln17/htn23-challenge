@@ -55,7 +55,30 @@ const Home = () => {
 
   return (
     <>
-      <Navbar/>
+          <Plx
+        parallaxData={[
+          {
+            start: 0,
+            end: 400,
+            easing: "ease-in",
+            properties: [
+              {
+                startValue: 1,
+                endValue: 0,
+                property: "opacity"
+              },
+              {
+                startValue: 0,
+                endValue: 350,
+                property: "translateY"
+              },
+            ]
+          }
+        ]}
+      >
+        <Navbar/>
+      </Plx>
+      
       <Plx
         parallaxData={[
           {
@@ -66,11 +89,11 @@ const Home = () => {
               {
                 startValue: 1,
                 endValue: 0,
-                property: "scale"
+                property: "opacity"
               },
               {
                 startValue: 0,
-                endValue: -350,
+                endValue: 350,
                 property: "translateY"
               },
             ]
@@ -86,13 +109,18 @@ const Home = () => {
         parallaxData={[
           {
             start: 0,
-            end: 100,
+            end: 700,
             easing: "ease-in",
             properties: [
               {
                 startValue: 0,
                 endValue: 1,
                 property: "opacity"
+              },
+              {
+                startValue: 200,
+                endValue: 500,
+                property: "translateY"
               },
             ]
           }
@@ -129,8 +157,10 @@ const Home = () => {
             })}
           </div>
         </div>
+
+        <Footer />
       </Plx>
-      <Footer />
+      
     </>
   );
 }

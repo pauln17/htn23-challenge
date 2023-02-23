@@ -6,6 +6,7 @@ import { Card, ListGroup } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../styles/main-page/eventCard.css';
 
+// (Capitalizes String & Removes Underscore) -- event_type formatting
 function toProperCase(str) {
     const noUnderscores = str.replace(/_/g, ' ');
     const capitalized = noUnderscores.replace(/(^|\s)\S/g, function(firstLetter) {
@@ -15,10 +16,6 @@ function toProperCase(str) {
 }
 
 const EventCard = ({ event: { description, event_type, id, name, permission, private_url, public_url, speakers, start_time } }) => {
- 
-    // (Capitalizes String & Removes Underscore) -- event_type formatting
-
-
     return (
         <>
             <Card className="card h-100 w-100" style={{ width: '18rem' }}>
