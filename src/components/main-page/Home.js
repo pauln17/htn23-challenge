@@ -86,18 +86,13 @@ const Home = () => {
         parallaxData={[
           {
             start: 0,
-            end: 400,
+            end: 100,
             easing: "ease-in",
             properties: [
               {
                 startValue: 0,
                 endValue: 1,
                 property: "opacity"
-              },
-              {
-                startValue: 0.6,
-                endValue: 1,
-                property: "scale"
               },
             ]
           }
