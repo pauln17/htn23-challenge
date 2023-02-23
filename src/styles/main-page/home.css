@@ -72,13 +72,13 @@ body {
   align-items: center;
   font-family: 'Noto Sans', sans-serif;
   color: #000000;
+  padding: 5px;
+  height: 100%;
+  gap: 25px;
 }
 
 .optionals select {
   background: var(--optionals-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   outline: 0;
   border-radius: 3rem;
   padding: 5%;
@@ -96,12 +96,10 @@ body {
   border-radius: 3rem;
   background: var(--optionals-color);
   border: 3px solid black;
-  margin: 25px;
 }
 
 .search-bar input {
   width: 100%;
-  height: calc(1.25vw + 1vh);
   border: none;
   border-radius: 15px;
   font-size: calc(0.5vw + 1vh);
