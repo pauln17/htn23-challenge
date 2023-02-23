@@ -102,8 +102,6 @@ const Home = () => {
       >
         <HeroText />
       </Plx>
-      
-
 
       <Plx
         parallaxData={[
@@ -118,8 +116,8 @@ const Home = () => {
                 property: "opacity"
               },
               {
-                startValue: 200,
-                endValue: 500,
+                startValue: 0,
+                endValue: -100,
                 property: "translateY"
               },
             ]
@@ -157,10 +155,9 @@ const Home = () => {
             })}
           </div>
         </div>
-
+        
         <Footer />
-      </Plx>
-      
+      </Plx> 
     </>
   );
 }

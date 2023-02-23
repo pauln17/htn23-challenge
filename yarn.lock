@@ -1932,7 +1932,7 @@
 
 "@types/bezier-easing@^2.1.2":
   version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@types/bezier-easing/-/bezier-easing-2.1.2.tgz#04ce5a6e148543f5dca4e6066db363b19a6f294a"
+  resolved "https://registry.npmjs.org/@types/bezier-easing/-/bezier-easing-2.1.2.tgz"
   integrity sha512-1f9PSSooB7VBfwNQm5nKE8i7XXWWtjKPmm1apg52pxq/mmuyJNZpvEzR2n+c0+XPs0ldLoVWWp54tqkXsKxFsA==
   dependencies:
     bezier-easing "*"
@@ -2922,7 +2922,7 @@ batch@0.6.1:
 
 bezier-easing@*, bezier-easing@^2.1.0:
   version "2.1.0"
-  resolved "https://registry.yarnpkg.com/bezier-easing/-/bezier-easing-2.1.0.tgz#c04dfe8b926d6ecaca1813d69ff179b7c2025d86"
+  resolved "https://registry.npmjs.org/bezier-easing/-/bezier-easing-2.1.0.tgz"
   integrity sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==
 
 bfj@^7.0.2:
@@ -7686,7 +7686,7 @@ react-lifecycles-compat@^3.0.4:
 
 react-plx@^2.0.1:
   version "2.0.1"
-  resolved "https://registry.yarnpkg.com/react-plx/-/react-plx-2.0.1.tgz#31abb3ec20dd39e6a3d93296d253a84f52fb3ce2"
+  resolved "https://registry.npmjs.org/react-plx/-/react-plx-2.0.1.tgz"
   integrity sha512-hEUhCZbHDCfoUawOi4dieiBOM5XY7bXlPwOPR+DDzGz6N9BdkJALwDQevT/F2ROq5bZXdZH8p35rK/GWwUAUQg==
   dependencies:
     "@types/bezier-easing" "^2.1.2"
@@ -7770,7 +7770,7 @@ react-scripts@^5.0.1:
 
 react-simple-typewriter@^5.0.1:
   version "5.0.1"
-  resolved "https://registry.yarnpkg.com/react-simple-typewriter/-/react-simple-typewriter-5.0.1.tgz#cfdb896c868a55ed4d5f1f06d62b3a9d0f5ad9d7"
+  resolved "https://registry.npmjs.org/react-simple-typewriter/-/react-simple-typewriter-5.0.1.tgz"
   integrity sha512-vA5HkABwJKL/DJ4RshSlY/igdr+FiVY4MLsSQYJX6FZG/f1/VwN4y1i3mPXRyfaswrvI8xii1kOVe1dYtO2Row==
 
 react-transition-group@^4.4.2:
@@ -9591,7 +9591,7 @@ which@^2.0.1:
 
 window-scroll-manager@^1.1.4:
   version "1.1.4"
-  resolved "https://registry.yarnpkg.com/window-scroll-manager/-/window-scroll-manager-1.1.4.tgz#7033c12edf778cb85fe545d3a1c37e1f1a7870c9"
+  resolved "https://registry.npmjs.org/window-scroll-manager/-/window-scroll-manager-1.1.4.tgz"
   integrity sha512-Oj916sD6Daigs128qtksCcBGvwXcuTuMn65m1FEp/QINBwbkval43p0qfZna2GFExXZFdoMTT3/s1of0szsG7A==
 
 word-wrap@^1.2.3, word-wrap@~1.2.3:

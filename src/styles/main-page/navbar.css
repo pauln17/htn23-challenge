@@ -10,7 +10,7 @@
     padding: 25px;
     gap: 25px;
     font-weight: 1000;
-    margin-bottom: 8%;
+    margin-bottom: 4%;
 }
 
 .navbar-links {
@@ -56,12 +56,6 @@
 
 .register h3:hover {
     color: rgb(219, 218, 218);
-}
-
-@media (max-width: 1000px) {
-    .navBar {
-        margin-bottom: 0;
-    }
 }
 
 @media (max-width: 500px) {
