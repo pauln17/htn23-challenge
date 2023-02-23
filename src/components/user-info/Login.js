@@ -23,6 +23,7 @@ const Login = () => {
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password" required/>
                         </div>
+                        <button className="user-button">Sign In</button>
                     </form>
 
                     <div className="links">

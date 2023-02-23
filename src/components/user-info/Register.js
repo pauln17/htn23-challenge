@@ -23,10 +23,7 @@ const Register = () => {
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password" required/>
                         </div>
-                        <div className="input">
-                            <label for="password_confirmation">Password Confirmation</label>
-                            <input type="password" id="password_confirmation" name="password_confirmation" required/>
-                        </div>
+                        <button className="user-button">Create Account</button>
                     </form>
 
                     <div className="links">
