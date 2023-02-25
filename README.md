@@ -3,7 +3,7 @@
 To view the website, fork the repository, open it and `cd` to the correct path. Type `npm i` in the terminal to install the packages and then type `npm start` to start the application. In the scenario of any errors with `npm i`, run `npm i --legacy-peer-deps` instead, then `npm start`.
 
 ### Video Demo
-https://user-images.githubusercontent.com/119803257/221338571-d53af8f0-67b5-454d-8baa-6a7b5adca2d9.mp4
+https://user-images.githubusercontent.com/119803257/221338743-0cb69560-7779-4acb-b2f5-141f7ca80831.mp4
 
 # Write-Up
 1. Walk us through your development process as you worked on this project. How did you plan out the structure and design of it? How did you decide on the tools you've used? Did you encounter any problems? And if so, how did you solve them? Are there any areas of your code that you're particularly proud of or want to point out?
