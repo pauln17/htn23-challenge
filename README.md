@@ -5,6 +5,16 @@ To view the website, fork the repository, open it and `cd` to the correct path. 
 ### Video Demo
 https://user-images.githubusercontent.com/119803257/221338743-0cb69560-7779-4acb-b2f5-141f7ca80831.mp4
 
+### Account Information
+You can manually create your own account and login via the register/login pages at the top right of the navigation bar.
+
+Some preset accounts are:
+Email: testing@gmail.com
+Password: 123456
+
+Email: test123@gmail.com
+Password: 123456
+
 # Write-Up
 1. Walk us through your development process as you worked on this project. How did you plan out the structure and design of it? How did you decide on the tools you've used? Did you encounter any problems? And if so, how did you solve them? Are there any areas of your code that you're particularly proud of or want to point out?
 
