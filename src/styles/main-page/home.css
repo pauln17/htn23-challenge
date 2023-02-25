@@ -33,6 +33,7 @@ body {
   border-radius: 15px;
   margin: 8% 7% 0 7%;
   z-index: 10000;
+  min-height: 35rem;
 }
 
 .browse-events-container {

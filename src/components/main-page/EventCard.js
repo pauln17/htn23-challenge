@@ -20,12 +20,12 @@ function toProperCase(str) {
 
 const EventCard = ({ event: { description, event_type, id, name, permission, private_url, public_url, speakers, start_time } }) => {
     
-    const isAuth = useAuthStatus();
+    const { isAuth } = useAuthStatus();
 
     return (
         <>
             <Card className="card h-100 w-100" style={{ width: '18rem' }}>
-                <a className="card-info-link" href={isAuth.isAuth ? private_url : public_url} target="_blank" rel="noreferrer">
+                <a className="card-info-link" href={isAuth ? private_url : public_url} target="_blank" rel="noreferrer">
                     <div className="cards-content-container">
                         <div>
                             <Card.Img className="card-img" variant="top" src='https://i.imgur.com/SZFa3wf.png'/>
