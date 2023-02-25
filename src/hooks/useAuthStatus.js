@@ -1,10 +1,10 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { getAuth } from "firebase/auth";
 import app from '../components/user-info/Firebase';
 const auth = getAuth(app);
 
 export const useAuthStatus = () => {
-    const [ isAuth, setAuthStatus ] = useState(false);
+    const [isAuth, setAuthStatus] = useState(false);
     const [email, setEmail] = useState('');
 
     useEffect(() => {

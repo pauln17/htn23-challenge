@@ -11,7 +11,6 @@ import Register from './components/user-info/Register';
 function App() {
   return (
     <>
-      
       <ParticleEffects />
       <Router>
         <Routes>

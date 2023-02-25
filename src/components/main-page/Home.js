@@ -13,6 +13,9 @@ import Footer from './Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../styles/main-page/home.css';
 
+// Hooks
+import { useAuthStatus } from '../../hooks/useAuthStatus';
+
 // API URL
 const EVENTS_API_URL = 'https://api.hackthenorth.com/v3/events/';
 
@@ -21,17 +24,23 @@ const Home = () => {
   const [events, setEvents] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState('');
+  // User Logged In or Out
+  const { isAuth } = useAuthStatus();
 
   // Fetch & Modify Data from URL
   const getEvents = useCallback(async (searchTerm, category) => {
     const response = await fetch(`${EVENTS_API_URL}`);
-    const data = await response.json();
+    let data = await response.json();
+
+    if (!isAuth) {
+      data = data.filter(event => event.permission.includes('public'));
+    }
 
     let filteredData = data;
 
     // Filter for events with names that include input from search bar
     if (searchTerm) {
-      filteredData = data.filter(event => event.name.toLowerCase().includes(searchTerm.toLowerCase()));
+      filteredData = filteredData.filter(event => event.name.toLowerCase().includes(searchTerm.toLowerCase()));
     }
 
     // If 'All' option is not selected, then filter the previous filtered data based on category selected
@@ -53,7 +62,7 @@ const Home = () => {
     filteredData.sort((a, b) => a.start_time - b.start_time);
 
     setEvents(filteredData)
-  }, [setEvents]);
+  }, [setEvents, isAuth]);
 
   // Render w/ Dependencies [searchTerm, getEvents] -- run everytime these functions are called/changed
   useEffect(() => {
