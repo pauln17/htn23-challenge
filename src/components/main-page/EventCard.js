@@ -2,6 +2,9 @@
 import React from 'react';
 import { Card, ListGroup } from 'react-bootstrap'
 
+// Hooks
+import { useAuthStatus } from '../../hooks/useAuthStatus';
+
 // CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../styles/main-page/eventCard.css';
@@ -16,6 +19,9 @@ function toProperCase(str) {
 }
 
 const EventCard = ({ event: { description, event_type, id, name, permission, private_url, public_url, speakers, start_time } }) => {
+    
+    const isAuth = useAuthStatus(); 
+    
     return (
         <>
             <Card className="card h-100 w-100" style={{ width: '18rem' }}>

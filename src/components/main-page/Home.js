@@ -22,7 +22,6 @@ const Home = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [category, setCategory] = useState('');
 
-
   // Fetch & Modify Data from URL
   const getEvents = useCallback(async (searchTerm, category) => {
     const response = await fetch(`${EVENTS_API_URL}`);

@@ -60,6 +60,7 @@
 
 @media (max-width: 500px) {
     .navBar {
+        margin-top: 25px;
         flex-direction: column;
         justify-content: center;
         align-items: center;

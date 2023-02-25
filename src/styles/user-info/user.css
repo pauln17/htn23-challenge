@@ -80,6 +80,7 @@ input {
 }
 
 .user-button {
+    color: black;
     background:rgb(230, 230, 230);
     font-size: calc(0.25vw + 1vh);
     padding: 15px;
@@ -96,11 +97,50 @@ input {
     background: rgb(168, 168, 168);
 }
 
+.user-button:disabled {
+    background: rgb(209, 209, 209);
+    color: rgb(22, 22, 22);
+}
+
+.user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.user-email h3 {
+    font-family: 'Libre Franklin', sans-serif;
+    color: white;
+    font-size: calc(0.35vw + 1vh);
+    margin: 0;
+}
+
+.logout button {
+    color: black;
+    background:rgb(230, 230, 230);
+    font-size: calc(0.15vw + 1vh);
+    transition: 0.15s ease-in;
+    border-radius: 15px;
+    outline: 0;
+    border: none;
+    padding: 0.5rem 1rem 0.5rem;
+}
+
+.logout button:hover {
+    background: rgb(168, 168, 168);
+}
+
 @media (max-width: 500px) {
     .user-container h3 {
         font-family: 'Libre Franklin', sans-serif;
         color: rgb(0, 0, 0);
         font-size: 2rem;
         border-bottom: 1px solid black;
+    }
+
+    .user-info {
+        flex-direction: column;
+        gap: 10px;
     }
 }
