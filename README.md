@@ -32,8 +32,8 @@ Additionally, running `npm i` gave all sort of unfamiliar errors, thus I had bee
 Overall, I had a lot of small errors through the project that took me one or two+ hours to debug. The general mentality I used approaching these types of issues were as following:
 
 - Stepping through the code, visualizing and explaining out loud what it is that the code is doing, and then what I want it to do.
-- Check the syntax
-- Implementing another version of the code
+- Check the syntax and fix accordingly, then test
+- Implementing another version of the code and test
 - Repeat
 
 ### Technologies
