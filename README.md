@@ -8,7 +8,8 @@ https://user-images.githubusercontent.com/119803257/221338743-0cb69560-7779-4acb
 ### Account Information
 You can manually create your own account and login via the register/login pages at the top right of the navigation bar.
 
-Some preset accounts are:
+#### Preset Accounts:
+
 Email: testing@gmail.com
 Password: 123456
 
@@ -27,6 +28,13 @@ I realize that to get started, I had to learn new programs like React. So, I wat
 One of the challenging tasks were lining up the height of the cards because the event descriptions varied in length. It took me a day or two to experiment with different approaches, such as using bootstrap rows and columns, to set the height of each column equal to the height of the longest card. I think the best thing I learned here, was to take a break and do something else, because my solution came from a random conversation with a friend. I ended up using CSS grids which enabled me to create dynamic columns based on the height of the cards. 
 
 Additionally, running `npm i` gave all sort of unfamiliar errors, thus I had been using `--legacy-peer-deps` to install new libraries. This had no effect on my website but I wanted to resolve the issue in case there were unexpected issues later on. Upon googling a few of the errors, I learned about Yarn and implemented it. Yarn would automatically deal with a variety of tasks including updating packages and et cetera. However, there were still problems remaining as error messages regarding my current libraries popped up when I tried to install certain libraries. I was able to solve this by debugging the error messages and had realized that I needed other packages, which I used Yarn to install, fixing the problem.
+
+Overall, I had a lot of small errors through the project that took me one or two+ hours to debug. The general mentality I used approaching these types of issues were as following:
+
+- Stepping through the code, visualizing and explaining out loud what it is that the code is doing, and then what I want it to do.
+- Check the syntax
+- Implementing another version of the code
+- Repeat
 
 ### Technologies
 I did not have a particular technology stack in mind when I started the project since I lacked experience. However, I gained a better understanding of the required technologies and learned as I built the project. The technologies I ended up using throughout the program are: `React, HTML/CSS, JS, Bootstrap, Firebase Authentication`.
