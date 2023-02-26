@@ -19,7 +19,9 @@ const Login = () => {
             await signInWithEmailAndPassword(auth, email, password);
             navigate('/');
         } catch (error) {
+            alert('Invalid email or password. Please try again.');
             console.error(error);
+            location.reload();
         }
     }
     
