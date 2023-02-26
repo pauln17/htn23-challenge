@@ -21,7 +21,7 @@ const Login = () => {
         } catch (error) {
             alert('Invalid email or password. Please try again.');
             console.error(error);
-            location.reload();
+            window.location.reload();
         }
     }
     
