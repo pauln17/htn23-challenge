@@ -1,9 +1,12 @@
 # Phuc (Paul) Nguyen HTN 2023 Frontend Challenge
-### Instructions
-To view the website, fork the repository, open it and `cd` to the correct path. Type `npm i` in the terminal to install the packages and then type `npm start` to start the application. In the scenario of any errors with `npm i`, run `npm i --legacy-peer-deps` instead, then `npm start`.
+### Live Demo
+https://htn23-challenge.vercel.app/
 
 ### Video Demo
 https://user-images.githubusercontent.com/119803257/221338743-0cb69560-7779-4acb-b2f5-141f7ca80831.mp4
+
+### Contribute
+To contribute, fork the repository, open it and `cd` to the correct path. Type `npm i` in the terminal to install the packages and then type `npm start` to start the application. In the scenario of any errors with `npm i`, run `npm i --legacy-peer-deps` instead, then `npm start`.
 
 ### Account Information
 You can manually create your own account and login via the register/login pages at the top right of the navigation bar.
