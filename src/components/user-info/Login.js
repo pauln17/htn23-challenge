@@ -40,7 +40,7 @@ const Login = () => {
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)}/>
                         </div>
-                        <button className="user-button" submit="false" onClick={login} disabled={!(email.match(/\S+@\S+\.\S+/) && password.length === 6)}>Sign In</button>
+                        <button className="user-button" submit="false" onClick={login} disabled={!(email.match(/\S+@\S+\.\S+/) && password.length >= 6)}>Sign In</button>
                     </form>
 
                     <div className="links">
