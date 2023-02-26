@@ -9,7 +9,7 @@ https://user-images.githubusercontent.com/119803257/221338743-0cb69560-7779-4acb
 To contribute, fork the repository, open it and `cd` to the correct path. Type `npm i` in the terminal to install the packages and then type `npm start` to start the application. In the scenario of any errors with `npm i`, run `npm i --legacy-peer-deps` instead, then `npm start`.
 
 ### Account Information
-You can manually create your own account and login via the register/login pages at the top right of the navigation bar -- CURRENT UNDEALT ERRORS: USE PRESET ACCOUNTS
+You can manually create your own account and login via the register/login pages at the top right of the navigation bar
 
 #### Preset Accounts:
 
