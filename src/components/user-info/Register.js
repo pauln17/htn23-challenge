@@ -26,7 +26,7 @@ const Register = () => {
     return (
         <>
           <div className="user-container">  
-                <div className="forms-container">
+                <div className="forms-container" onSubmit={(e) => e.preventDefault()}>
                     <div className="user-hero">
                         <h3>Registration</h3>
                     </div>
