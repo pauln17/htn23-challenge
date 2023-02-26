@@ -43,6 +43,8 @@
     align-items: center;
     padding: 10px;
     gap: 5px;
+    outline: 0;
+    border: none;
 }
 
 label {
